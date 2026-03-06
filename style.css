@@ -1,0 +1,114 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --primary: #3b82f6;
+  --primary-dark: #2563eb;
+  --muted: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(180deg, #eef3ff 0%, var(--bg) 100%);
+  color: var(--text);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.app {
+  width: min(92vw, 420px);
+  background: var(--card);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 28px rgba(31, 41, 55, 0.12);
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.settings {
+  display: grid;
+  gap: 0.8rem;
+}
+
+label {
+  font-size: 0.92rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.4rem;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+  font-size: 1rem;
+}
+
+.timer {
+  margin: 1.3rem 0;
+  text-align: center;
+}
+
+#modeText {
+  margin: 0;
+  color: var(--muted);
+}
+
+#countdown {
+  margin: 0.3rem 0 0;
+  font-size: 2.7rem;
+  font-weight: 700;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.65rem 0.8rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background: #e5e7eb;
+  color: var(--text);
+}
+
+#startBtn,
+#pauseBtn {
+  background: var(--primary);
+  color: #fff;
+}
+
+button:hover:enabled {
+  filter: brightness(0.96);
+}
+
+button:active:enabled {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+@media (max-width: 420px) {
+  #countdown {
+    font-size: 2.3rem;
+  }
+}

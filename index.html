@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>番茄钟计时器</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>番茄钟计时器</h1>
+
+      <section class="settings" aria-label="计时设置">
+        <label>
+          专注时长（分钟）
+          <input id="focusInput" type="number" min="1" max="180" value="25" />
+        </label>
+
+        <label>
+          休息时长（分钟）
+          <input id="breakInput" type="number" min="1" max="60" value="5" />
+        </label>
+      </section>
+
+      <section class="timer" aria-live="polite">
+        <p id="modeText">准备开始</p>
+        <p id="countdown">25:00</p>
+      </section>
+
+      <section class="actions">
+        <button id="startBtn">开始</button>
+        <button id="pauseBtn" disabled>暂停</button>
+        <button id="resetBtn">重置</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
